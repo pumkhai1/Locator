@@ -6,8 +6,8 @@ import googlemaps
 class LocatorMap(customtkinter.CTk):
     customtkinter.set_default_color_theme("blue")
     APP_NAME = "TkinterMapView with Locator"
-    WIDTH = 800
-    HEIGHT = 500
+    WIDTH = 1000
+    HEIGHT = 800
 
     def __current_location(self):
         api_key = 'AIzaSyCJtIhU69bjx_0WbppAURYBbszX18GiCjg'
