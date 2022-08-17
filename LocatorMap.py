@@ -105,13 +105,13 @@ class LocatorMap(customtkinter.CTk):
 
     def change_map (self,new_map: str):
         if new_map == "OpenStreetMap":
-            self.map_widget.set_tile_server ( "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" )
+            self.map_widget.set_tile_server ( "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", max_zoom= 16 )
         elif new_map == "Google normal":
             self.map_widget.set_tile_server ( "https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga",
-                                              max_zoom=22 )
+                                              max_zoom=16 )
         elif new_map == "Google satellite":
             self.map_widget.set_tile_server ( "https://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga",
-                                              max_zoom=22 )
+                                              max_zoom=16 )
 
     def on_closing(self):
         self.destroy()
